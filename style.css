@@ -1,0 +1,73 @@
+:root{
+    --black:#000;
+    --pinkBackground:#FFF2ED;
+    --purpleButton:#532980;
+    --purpleHighlight: #A737FF;
+    --pinkHighlight: #FF94D8;
+    --white:#FFF;
+}
+
+body{
+height: 100vh;
+background-color: var(--pinkBackground);
+}
+
+/* #region Navigation */
+nav{
+   /* display: inline-flex; */
+
+  margin: 10px 70px; 
+
+}
+
+#nav-list{
+    /* float: center; */
+    /* margin-left: 200px;
+    margin-right:auto; */
+    /* margin: 0 auto;   */
+    
+}
+
+#nav-list li{
+    display: inline-block;
+    margin: 10px 60px;
+    
+}
+
+#nav-list li a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 40px;
+}
+
+#data-vis{
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 40px;
+}
+
+#data-vis-button{
+background-color: var(--purpleButton);
+border-radius: 20px;
+text-align: center;
+width: fit-content;
+float: right;
+/* top: -140; */
+
+}
+
+#check{
+display: none;
+}
+
+.burger-button{
+    font-size: 3px;
+    color: var(--pinkHighlight);
+    float: right;
+    margin-right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+/* #endregion */

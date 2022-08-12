@@ -10,8 +10,56 @@
   </head>
   <body>
     <header>
-      <nav></nav>
+      <nav>
+        <input type="checkbox" name="" id="check" />
+        <label for="check" class="burger-button"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+
+        <ul id="nav-list">
+          <li>
+            <a href="#" class="active" id="home" onclick="navigateTo('home',0)"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" id="blog" onclick="navigateTo('photography',0)">Blog</a>
+          </li>
+          <li>
+            <a href="#" id="design" onclick="navigateTo('design',0)">Design</a>
+          </li>
+          <li>
+            <a href="#" id="data-art" onclick="navigateTo('blog',0)"
+              >Data Art</a
+            >
+          </li>
+        </ul>
+        <div id="data-vis-button">
+          <li>
+            <a href="#" id="data-vis" onclick="navigateTo('blog',0)"
+              >Data Visualisation ></a
+            >
+          </li>
+        </div>
+      </nav>
     </header>
-    <h1>Welcome to the Age of Remake Hell</h1>
+
+    <section>
+      <h1>Welcome to the Age of Remake Hell</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        rhoncus sapien libero, non dapibus dolor rutrum in. Duis nec diam vitae
+        orci sodales varius. Sed mollis cursus ipsum, ut blandit urna laoreet
+        at. Ut pulvinar diam quis venenatis imperdiet. Nam at tortor nec elit
+        rhoncus ultricies nec ut nibh. Fusce rhoncus varius quam quis mattis.
+        Quisque ac venenatis dui. Vivamus ultrices accumsan malesuada. Nulla id
+        dolor et risus tempus posuere. Vestibulum eros metus, egestas eu nulla
+        nec, pharetra sodales risus. Mauris odio tellus, rutrum in hendrerit a,
+        dignissim tristique turpis.
+      </p>
+    </section>
+    <section>
+      <img src="art-assets/Rectangle 1.png" alt="" srcset="" />
+    </section>
   </body>
 </html>
