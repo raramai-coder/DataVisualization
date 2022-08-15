@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="normalize.css" />
+    <script src="navigate.js"></script>
     <title>Home</title>
   </head>
   <body>
@@ -23,19 +24,19 @@
             >
           </li>
           <li>
-            <a href="#" id="blog" onclick="navigateTo('photography',0)">Blog</a>
+            <a href="#" id="blog" onclick="navigateTo('blog',0)">Blog</a>
           </li>
           <li>
             <a href="#" id="design" onclick="navigateTo('design',0)">Design</a>
           </li>
           <li>
-            <a href="#" id="data-art" onclick="navigateTo('blog',0)"
+            <a href="#" id="data-art" onclick="navigateTo('data-art',0)"
               >Data Art</a
             >
           </li>
           <li>
             <div id="data-vis-button">
-              <a href="#" id="data-vis" onclick="navigateTo('blog',0)"
+              <a href="#" id="data-vis" onclick="navigateTo('data-vis',0)"
                 >Data Visualisation ></a
               >
             </div>
@@ -43,24 +44,27 @@
         </ul>
       </nav>
     </header>
-    <div id="index-div">
-      <section id="text-section">
-        <h1>Welcome to the Age of Remake Hell</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          rhoncus sapien libero, non dapibus dolor rutrum in. Duis nec diam
-          vitae orci sodales varius. Sed mollis cursus ipsum, ut blandit urna
-          laoreet at. Ut pulvinar diam quis venenatis imperdiet. Nam at tortor
-          nec elit rhoncus ultricies nec ut nibh. Fusce rhoncus varius quam quis
-          mattis. Quisque ac venenatis dui. Vivamus ultrices accumsan malesuada.
-          Nulla id dolor et risus tempus posuere. Vestibulum eros metus, egestas
-          eu nulla nec, pharetra sodales risus. Mauris odio tellus, rutrum in
-          hendrerit a, dignissim tristique turpis.
-        </p>
-      </section>
-      <section id="image-section">
-        <img src="art-assets/Rectangle 1.png" alt="" srcset="" />
-      </section>
-    </div>
+    <main>
+        <div id="index-div">
+          <section id="text-section">
+            <h1>Welcome to the Age of Remake Hell</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              rhoncus sapien libero, non dapibus dolor rutrum in. Duis nec diam
+              vitae orci sodales varius. Sed mollis cursus ipsum, ut blandit urna
+              laoreet at. Ut pulvinar diam quis venenatis imperdiet. Nam at tortor
+              nec elit rhoncus ultricies nec ut nibh. Fusce rhoncus varius quam quis
+              mattis. Quisque ac venenatis dui. Vivamus ultrices accumsan malesuada.
+              Nulla id dolor et risus tempus posuere. Vestibulum eros metus, egestas
+              eu nulla nec, pharetra sodales risus. Mauris odio tellus, rutrum in
+              hendrerit a, dignissim tristique turpis.
+            </p>
+          </section>
+          <section id="image-section">
+            <img src="art-assets/Rectangle 1.png" alt="" srcset="" />
+          </section>
+        </div>
+    </main>
+ 
   </body>
 </html>

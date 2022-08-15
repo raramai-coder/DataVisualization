@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="navigate.js"></script>
+    <title>Data Visualisation</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" name="" id="check" />
+            <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+    
+            <ul id="nav-list">
+                <li>
+                    <a href="#" class="active" id="home" onclick="navigateTo('home',0)">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="blog" onclick="navigateTo('blog',0)">Blog</a>
+                </li>
+                <li>
+                    <a href="#" id="design" onclick="navigateTo('design',0)">Design</a>
+                </li>
+                <li>
+                    <a href="#" id="data-art" onclick="navigateTo('data-art',0)">Data Art</a>
+                </li>
+                <li>
+                    <div id="data-vis-button">
+                        <a href="#" id="data-vis" onclick="navigateTo('data-vis',0)">Data Visualisation ></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Data Visualisation</h1>
+</body>
+</html>
