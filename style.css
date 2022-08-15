@@ -52,6 +52,8 @@ margin: auto;
     
 }
 
+
+
 /* #region movie Posters */
 
 #img1{
@@ -242,5 +244,72 @@ display: none;
     line-height: 80px;
     cursor: pointer;
     display: none;
+}
+/* #endregion */
+
+/* #region Data Visualisation */
+
+#main-section {
+    display:grid;
+    gap:10px;
+    margin: 20px;;
+}
+
+#legend-section{
+    grid-column: 1/2;
+}
+
+#graph-section{
+    grid-column: 2/5;
+}
+
+#graph{
+    background-color: var(--white);
+    height:600px;
+    width: inherit;
+    border-radius: 5px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+#legend{
+    background-color: var(--white);
+    height: 200px;
+    width: inherit;
+    border-radius: 5px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#variable-container{
+    background-color: var(--white);
+    min-height: 200px;
+    width: inherit;
+    border-radius: 5px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.variable-drop{
+background-color: var(--grey);
+    height: 50px;
+    width: inherit;
+    border-radius: 5px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
 }
 /* #endregion */
