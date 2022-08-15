@@ -313,3 +313,43 @@ background-color: var(--grey);
     margin: 20px;
 }
 /* #endregion */
+
+/* #region Blog Cards  */
+
+.blog-cards{
+    max-width: 85vw;
+    margin: auto;
+    background-color: var(--white);
+    border-style:solid;
+    border-width: 0.5px;
+    border-color: var(--pinkHighlight);
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-auto-columns: 24%;
+    gap: 10px;
+    box-shadow: 1.5px 1.5px 5px var(--pinkHighlight);
+    margin-top: 30px;
+}
+
+.blog-text{
+    grid-column: 1/4;
+    width: inherit;
+}
+
+.blog-image {
+    grid-column: 4/5;
+    width: inherit;
+    background-color: var(--white);
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--grey);
+    border-radius: 15px;
+}
+
+/* #blog-main{
+    margin-top: 60px;
+    padding-top: 20px;
+} */
+
+/* #endregion */
