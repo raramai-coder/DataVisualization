@@ -8,29 +8,61 @@
 }
 
 body{
-height: 100vh;
+/* height: 100vh; */
 background-color: var(--pinkBackground);
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    float: inline-start;
+}
+
+#index-div{
+   display: grid;
+   /* grid-template-columns: 20% 20% 20% 20% 20%; */
+   gap: 50px; 
+   /* s */
+   /* margin-top: 120px; */
+width: 90%;
+margin: auto;
+}
+
+#text-section{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 150px;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+}
+
+#image-section{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    /* grid-row-start: 4;
+    grid-row-end: 5; */
+    margin-top: 150px;
+    margin-left: 20px;
+    /* min-width: 400px; */
 }
 
 /* #region Navigation */
 nav{
-   /* display: inline-flex; */
-
-  margin: 10px 70px; 
-
+float: right;
+/* background-color: #532980; */
+width: 100vw;
 }
 
 #nav-list{
-    /* float: center; */
-    /* margin-left: 200px;
-    margin-right:auto; */
-    /* margin: 0 auto;   */
+    float: right;
+    margin-left: 40px;
     
 }
 
 #nav-list li{
     display: inline-block;
-    margin: 10px 60px;
+    margin-right: 40px;
+    margin-top: 10px;
     
 }
 
@@ -41,9 +73,9 @@ nav{
 }
 
 #data-vis{
-    margin-right: 20px;
+    margin: 20px;
     text-decoration: none;
-    color: var(--white);
+    color: var(--white) !important;
     font-size: 40px;
 }
 
