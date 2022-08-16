@@ -30,8 +30,8 @@ a{
    gap: 50px; 
    /* s */
    /* margin-top: 120px; */
-width: 90%;
-margin: auto;
+    width: 90%;
+    margin: auto;
 }
 
 #text-section{
@@ -521,6 +521,13 @@ background-color: var(--grey);
 
     #design-main{
         z-index: -1;
+    }
+
+    #image-section {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-auto-rows: 85px;
+        grid-auto-columns: auto;
     }
 }
 
