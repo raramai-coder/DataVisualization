@@ -203,6 +203,12 @@ position: absolute;
 top: 0;
 }
 
+.underline{
+    width: inherit;
+    height: 5.5px;
+    background-color: var(--pinkHighlight);
+}
+
 #nav-list{
     float: right;
     margin-left: 40px;
@@ -358,6 +364,7 @@ background-color: var(--grey);
     padding: 20px;
     width: 70%;
     margin: auto;
+    margin-top: 60px;
 }
 
 #blog-post-main h2{
