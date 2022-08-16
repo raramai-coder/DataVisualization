@@ -18,6 +18,9 @@ function navigateTo(page,folders) {
         case "design":
         navLink.href = siteURL+ "Design.html";
         break;
+        case "style":
+        navLink.href = siteURL+ "Design/styleGuide.html";
+        break;
     }
 }
 

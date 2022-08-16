@@ -369,7 +369,7 @@ background-color: var(--grey);
     padding: 5px;
     text-align: center;
     font-size: 30px;
-    
+    justify-content: center;
 }
 
 #design-main{
@@ -383,6 +383,10 @@ background-color: var(--grey);
     background-color: var(--pinkHighlight);
     border-radius: 15px;
     
+}
+
+#unselected a{
+    text-decoration: none;
 }
 
 .design-container{
