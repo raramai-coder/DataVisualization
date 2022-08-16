@@ -199,6 +199,8 @@ nav{
 float: right;
 /* background-color: #532980; */
 width: 100vw;
+position: absolute;
+top: 0;
 }
 
 #nav-list{
@@ -362,10 +364,14 @@ background-color: var(--grey);
     text-align: center;
 }
 
-/* #blog-main{
+#blog-main{
     margin-top: 60px;
     padding-top: 20px;
-} */
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
 
 /* #endregion */
 
