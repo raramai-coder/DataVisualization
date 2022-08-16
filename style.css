@@ -401,7 +401,7 @@ background-color: var(--grey);
 .design-image{
     width: 60%;
     height: 60vh;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -429,6 +429,10 @@ background-color: var(--grey);
 
 .design-text-container h2{
     text-align: center;
+}
+
+.design-text-container p {
+    font-size: 20px;
 }
 
 /* #endregion */
