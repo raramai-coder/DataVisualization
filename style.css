@@ -387,6 +387,7 @@ background-color: var(--grey);
 
 #unselected a{
     text-decoration: none;
+    color: var(--black);
 }
 
 .design-container{
@@ -403,6 +404,13 @@ background-color: var(--grey);
     background-color: var(--white);
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.design-image img{
+    /* max-width: 100%; */
+    max-height: 100%;
+    width:100%;
+    object-fit: contain;
 }
 
 .design-divider{
