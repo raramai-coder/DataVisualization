@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../normalize.css" />
     <script src="../navigate.js"></script>
@@ -13,14 +15,16 @@
     <header>
         <nav>
             <input type="checkbox" name="" id="check" />
-            <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+            <label for="check" class="burger-button"><span class="material-symbols-outlined">
+                    menu
+                </span></label>
     
             <ul id="nav-list">
                 <li>
-                    <a href="#" class="active" id="home" onclick="navigateTo('home',1)">Home</a>
+                    <a href="#"  id="home" onclick="navigateTo('home',1)">Home</a>
                 </li>
                 <li>
-                    <a href="#" id="blog" onclick="navigateTo('blog',1)">Blog</a>
+                    <a href="#" id="blog" class="active" onclick="navigateTo('blog',1)">Blog</a>
                     <div class="underline"></div>
                 </li>
                 <li>
