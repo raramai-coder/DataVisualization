@@ -24,6 +24,8 @@ a{
     color: var(--black);
 }
 
+/* #region Home Page */
+
 #index-div{
    display: grid;
    /* grid-template-columns: 20% 20% 20% 20% 20%; */
@@ -57,7 +59,7 @@ a{
     
 }
 
-
+/* #endregion */
 
 /* #region movie Posters */
 
@@ -529,6 +531,11 @@ background-color: var(--grey);
         grid-auto-rows: 85px;
         grid-auto-columns: auto;
     }
+
+    #design-toggle {
+        font-size: 20px;
+    }
+
 }
 
 /* #endregion */
