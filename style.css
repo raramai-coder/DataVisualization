@@ -19,6 +19,11 @@ h1{
     float: inline-start;
 }
 
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
 #index-div{
    display: grid;
    /* grid-template-columns: 20% 20% 20% 20% 20%; */
@@ -314,7 +319,7 @@ background-color: var(--grey);
 }
 /* #endregion */
 
-/* #region Blog Cards  */
+/* #region Blogs */
 
 .blog-cards{
     max-width: 85vw;
@@ -345,6 +350,16 @@ background-color: var(--grey);
     border-width: 0.5px;
     border-color: var(--grey);
     border-radius: 15px;
+}
+
+#blog-post-main{
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+#blog-post-main h2{
+    text-align: center;
 }
 
 /* #blog-main{
