@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <script src="../navigate.js"></script>
+    <title>Reflection on UI/UX</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" name="" id="check" />
+            <label for="check" class="burger-button"><span class="material-symbols-outlined">
+                    menu
+                </span></label>
+    
+            <ul id="nav-list">
+                <li>
+                    <a href="#"  id="home" onclick="navigateTo('home',1)">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="blog" class="active" onclick="navigateTo('blog',1)">Blog</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="#" id="design" onclick="navigateTo('design',1)">Design</a>
+                </li>
+                <li>
+                    <a href="#" id="data-art" onclick="navigateTo('data-art',1)">Data Art</a>
+                </li>
+                <li>
+                    <div id="data-vis-button">
+                        <a href="#" id="data-vis" onclick="navigateTo('data-vis',1)">Data Visualisation ></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="blog-post-main">
+        <h1>Reflection on UI/UX</h1>
+        <p>
+            The website is about a data visualisation of how movie remakes fared against their originals in terms of user ratings on imdb.
+        </p>
+        <h2>Layout</h2>
+        <p>I chose a minimalistic, simplistic layout with minimal clutter so that objects that are on the page stand out. As the dataset is not too complex and does not require a lot of additional information to be read and comprehended, I decided that a layout with minimal text and minimal elements on screen would be suitable. Because the layout is rather ‘plain’ I decided to bring a pop of playfulness and energy through the colour palette.</p>
+
+        <h2>Colours</h2>
+        <p>I chose a coral pink, bright deep pink, and dark purple as the primary colours of the website. As I feel that they convey a level of light-heartedness and playfulness that aligns with the data set I wish to visualize. The dataset is not about a serious topic like covid deaths for example, so it makes sense that the colour palette reflects this level of playfulness. And add a layer of intrigue that is not necessarily provided by the simplistic, minimalist layout.</p>
+
+        <h2>Font</h2>
+        <p>My first priority with fonts was to ensure that they are legible and dyslexia friendly. So, I chose two fonts that were both minimalistic in appearance but had little flourishes to them that brought character. As well as fonts that were unique enough to give the website a unique brand and feel.</p>
+        <p>The website is quite accessible and also colour blind friendly as I ran a test using chrome’s emulator.</p>
+    </main>
+</body>
+</html>
