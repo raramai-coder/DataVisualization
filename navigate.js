@@ -13,7 +13,7 @@ function navigateTo(page,folders) {
         navLink.href = siteURL+ "DataArt.html";
         break;
         case "data-vis":
-        navLink.href = siteURL+ "DataVis.html";
+        navLink.href = siteURL+ "Data Visualisations/DataVis.html";
         break;
         case "design":
         navLink.href = siteURL+ "Design.html";
