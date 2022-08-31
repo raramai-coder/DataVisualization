@@ -12,6 +12,7 @@ body{
     height: 100vh;
     background-color: var(--pinkBackground);
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 
 h1{
