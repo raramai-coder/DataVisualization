@@ -233,4 +233,11 @@ function populate(imdbs) {
   });
 }
 
-populate(originals);
+//populate(originals);
+
+d3.tsv("data.tsv", function(data) {
+    for (var i = 0; i < 10; i++) {
+        //console.log(data[i].tconst);
+        console.log(data.averageRating);
+    }
+})
