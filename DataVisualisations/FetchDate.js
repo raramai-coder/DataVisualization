@@ -236,8 +236,17 @@ function populate(imdbs) {
 //populate(originals);
 
 d3.tsv("data.tsv", function(data) {
-    for (var i = 0; i < 10; i++) {
-        //console.log(data[i].tconst);
-        console.log(data.averageRating);
-    }
+  //console.log(data.length);
+
+  if (data.tconst=="tt0780653") {
+      console.log(data.averageRating);
+  }
+  
+  // for (var i = 0; i < 10; i++) {
+  //       //console.log(data.length);
+  //       console.log(data.tconst);
+  //       if (data.tconst=="tt0780653") {
+  //         console.log(data.averageRating);
+  //       }
+  //   }
 })
