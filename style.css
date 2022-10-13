@@ -331,6 +331,18 @@ display: none;
     margin-top: 30px;
 }
 
+#interactive-graph{
+    background-color: var(--white);
+    height: 600px;
+    width: inherit;
+    border-radius: 5px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
 #graph-section h2{
     text-align: center;
 }

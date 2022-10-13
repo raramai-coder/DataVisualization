@@ -82,7 +82,8 @@ const options = {
 //console.log(dataJSON);  
 
 
-
+let originalMoviesColor = "#69b3a2";
+let movieRemakesColor = "#88CCF1";
 
 let url =
   "https://movie-database-alternative.p.rapidapi.com/?r=json&i=tt6139732";
@@ -106,7 +107,7 @@ let originalDisplay = [
   "tt0795368",
   "tt0120667",
   "tt0113568",
-  "tt0119375",
+  "tt0103639",
   "tt0024216",
   "tt0054215",
   "tt0093870",
@@ -119,12 +120,12 @@ let remakeDisplay = [
   "tt1321509",
   "tt1502712",
   "tt1219827",
-  "tt0278504",
+  "tt6139732",
   "tt0360717",
   "tt0155975",
   "tt1234721",
   "tt3040964",
-  "tt6105098"
+  "tt6105098",
 ];
 
 //array of remakes imdb numbers
@@ -386,7 +387,7 @@ d3.tsv("data.tsv", function (data) {
              return y(d.rating);
            })
            .attr("r", "10")
-           .style("fill", "#69b3a2")
+           .style("fill", originalMoviesColor)
            .attr("stroke", "black");
        }
 
@@ -408,8 +409,7 @@ d3.tsv("data.tsv", function (data) {
   });
 
    
-})
-.then(function (data) {
+}).then(function (data) {
   d3.csv(
     "titleData.csv",
     (add = (data) => {
@@ -484,7 +484,7 @@ d3.tsv("data.tsv", function (data) {
           return y(d.rating);
         })
         .attr("r", "10")
-        .style("fill", "#88CCF1")
+        .style("fill", movieRemakesColor)
         .attr("stroke", "black");
   });
 
@@ -497,113 +497,143 @@ function populateInteractiveGraph(movies) {
     //console.log(movies.length);
    
     movies.forEach((element) => {
-      if (data.Original == element.id || data.Remake == element.id) {
+      if (data.Original == element || data.Remake == element) {
         //console.log(data.averageRating);
         var movieTitle = data.Title;
         var originalID = data.Original;
         var remakeID = data.Remake;
         let movie = new MoviePair(movieTitle, originalID, remakeID);
         moviePairData.push(movie);
-        console.log(moviePairData);
+        //console.log(moviePairData);
       }
     });
 
     // console.log(moviePairData);
   }).then(function (data) {
-    
+    d3.tsv(
+      "data.tsv",
+      (add = (data) => {
+        //console.log(movieData.length);
+        moviePairData.forEach((element) => {
+          if (data.tconst == element.originalId) {
+            element.AddOriginalRating(data.averageRating);
+            //console.log(element.title);
+          } else if (data.tconst == element.remakeID) {
+            element.AddRemakeRating(data.averageRating);
+            //console.log(element.title);
+          }
+        });
+      })
+    ).then(function (data) {
+      console.log(moviePairData);
+
+      //set the dimensions and margins of the graph
+      var margin = { top: 10, right: 30, bottom: 90, left: 40 },
+        width = 760 - margin.left - margin.right,
+        height = 550 - margin.top - margin.bottom;
+
+      // append the svg object to the body of the page
+      const svg = d3
+        .select("#interactive-graph")
+        //.select(graphToPopulate)
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      // X axis
+      const x = d3
+        .scaleBand()
+        .range([0, width])
+        .domain(
+          moviePairData.map(function (d) {
+            return d.title;
+          })
+        )
+        .padding(1);
+
+      svg
+        .append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+      // Add Y axis
+      const y = d3.scaleLinear().domain([0, 10]).range([height, 0]);
+      svg.append("g").call(d3.axisLeft(y));
+
+      // Lines
+      svg
+        .selectAll("myline")
+        .data(moviePairData)
+        .enter()
+        .append("line")
+        .attr("x2", function (d) {
+          //console.log(d.title);
+          return x(d.title);
+        })
+        .attr("x1", function (d) {
+          return x(d.title);
+        })
+        .attr("y1", function (d) {
+          if (d.originalRating > d.remakeRating) {
+            //console.log(d.originalRating,d.remakeRating);
+            return y(d.originalRating);
+          } else {
+            return y(d.remakeRating);
+          }
+        })
+        .attr("y2", function (d) {
+          if (d.originalRating > d.remakeRating) {
+            //console.log(d.originalRating,d.remakeRating);
+            return y(d.remakeRating);
+          } else {
+            return y(d.originalRating);
+          }
+        })
+        .attr("stroke", function (d) {
+          if (d.originalRating > d.remakeRating) {
+            //console.log(d.originalRating,d.remakeRating);
+            return originalMoviesColor;
+          } else {
+            return movieRemakesColor;
+          }
+        });
+
+      // Original Movies Circles
+      svg
+        .selectAll("mycircle")
+        .data(moviePairData)
+        .join("circle")
+        .attr("cx", function (d) {
+          return x(d.title);
+        })
+        .attr("cy", function (d) {
+          return y(d.originalRating);
+        })
+        .attr("r", "10")
+        .style("fill", originalMoviesColor)
+        .attr("stroke", "black");
+
+      // Movie Remake Circles
+      svg
+        .selectAll("mycircler")
+        .data(moviePairData)
+        .join("circle")
+        .attr("cx", function (d) {
+          return x(d.title);
+        })
+        .attr("cy", function (d) {
+          return y(d.remakeRating);
+        })
+        .attr("r", "10")
+        .style("fill", movieRemakesColor)
+        .attr("stroke", "black");
+    });
   });
-
-  
-  // .then(function (data) {
-  //   d3.csv(
-  //     "titleData.csv",
-  //     (add = (data) => {
-  //       //console.log(movieData.length);
-  //       movieData.forEach((element) => {
-  //         if (data.Original == element.id || data.Remake == element.id) {
-  //           element.AddName(data.Title);
-  //           //console.log(element.title);
-  //         }
-  //       });
-  //     })
-  //   ).then(function (data) {
-  //     if (movieData.length == 10) {
-  //       //set the dimensions and margins of the graph
-  //       var margin = { top: 10, right: 30, bottom: 90, left: 40 },
-  //         width = 760 - margin.left - margin.right,
-  //         height = 550 - margin.top - margin.bottom;
-
-  //       // append the svg object to the body of the page
-  //       const svg = d3
-  //         .select("#graph")
-  //         //.select(graphToPopulate)
-  //         .append("svg")
-  //         .attr("width", width + margin.left + margin.right)
-  //         .attr("height", height + margin.top + margin.bottom)
-  //         .append("g")
-  //         .attr("transform", `translate(${margin.left},${margin.top})`);
-
-  //       // X axis
-  //       const x = d3
-  //         .scaleBand()
-  //         .range([0, width])
-  //         .domain(
-  //           movieData.map(function (d) {
-  //             return d.title;
-  //           })
-  //         )
-  //         .padding(1);
-
-  //       svg
-  //         .append("g")
-  //         .attr("transform", `translate(0, ${height})`)
-  //         .call(d3.axisBottom(x))
-  //         .selectAll("text")
-  //         .attr("transform", "translate(-10,0)rotate(-45)")
-  //         .style("text-anchor", "end");
-
-  //       // Add Y axis
-  //       const y = d3.scaleLinear().domain([0, 10]).range([height, 0]);
-  //       svg.append("g").call(d3.axisLeft(y));
-
-  //       // Lines
-  //       svg
-  //         .selectAll("myline")
-  //         .data(movieData)
-  //         .enter()
-  //         .append("line")
-  //         .attr("x2", function (d) {
-  //           //console.log(d.title);
-  //           return x(d.title);
-  //         })
-  //         .attr("x1", function (d) {
-  //           return x(d.title);
-  //         })
-  //         .attr("y1", function (d) {
-  //           return y(d.rating);
-  //         })
-  //         .attr("y2", y(0))
-  //         .attr("stroke", "grey");
-
-  //       // Circles
-  //       svg
-  //         .selectAll("mycircle")
-  //         .data(movieData)
-  //         .join("circle")
-  //         .attr("cx", function (d) {
-  //           return x(d.title);
-  //         })
-  //         .attr("cy", function (d) {
-  //           return y(d.rating);
-  //         })
-  //         .attr("r", "10")
-  //         .style("fill", "#69b3a2")
-  //         .attr("stroke", "black");
-  //     }
-
-  //     //console.log(movieData);
-  //   });
-  // });
   
 }
 
