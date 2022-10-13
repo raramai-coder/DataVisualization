@@ -319,9 +319,10 @@ d3.tsv("data.tsv", function (data) {
 
        if (movieData.length == 10) {
          //set the dimensions and margins of the graph
-         var margin = { top: 10, right: 30, bottom: 90, left: 40 },
-           width = 760 - margin.left - margin.right,
-           height = 550 - margin.top - margin.bottom;
+         var margin = { top: 20, right: 30, bottom: 90, left: 50 };
+         let box = document.querySelector("#graph");
+         let width = box.clientWidth - margin.left - margin.right;
+         let height = box.clientHeight - margin.top - margin.bottom;
 
          // append the svg object to the body of the page
          const svg = d3
@@ -350,6 +351,7 @@ d3.tsv("data.tsv", function (data) {
            .call(d3.axisBottom(x))
            .selectAll("text")
            .attr("transform", "translate(-10,0)rotate(-45)")
+           .style("font-size", "11.5px")
            .style("text-anchor", "end");
 
          // Add Y axis
@@ -423,9 +425,11 @@ d3.tsv("data.tsv", function (data) {
     })
   ).then(function (data) {
     //set the dimensions and margins of the graph
-      var margin = { top: 10, right: 30, bottom: 90, left: 40 },
-        width = 760 - margin.left - margin.right,
-        height = 550 - margin.top - margin.bottom;
+        var margin = { top: 20, right: 30, bottom: 90, left: 50 };
+        let box = document.querySelector("#graph2");
+        let width = box.clientWidth - margin.left - margin.right;
+        let height = box.clientHeight - margin.top - margin.bottom;
+
       // append the svg object to the body of the page
       const svg = d3
         .select("#graph2")
@@ -451,6 +455,7 @@ d3.tsv("data.tsv", function (data) {
         .call(d3.axisBottom(x))
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("font-size", "11.5px")
         .style("text-anchor", "end");
       // Add Y axis
       const y = d3.scaleLinear().domain([0, 10]).range([height, 0]);
@@ -528,9 +533,10 @@ function populateInteractiveGraph(movies) {
       console.log(moviePairData);
 
       //set the dimensions and margins of the graph
-      var margin = { top: 10, right: 30, bottom: 90, left: 40 },
-        width = 760 - margin.left - margin.right,
-        height = 550 - margin.top - margin.bottom;
+      var margin = { top: 20, right: 30, bottom: 90, left: 50 };
+      let box = document.querySelector("#interactive-graph");
+      let width = box.clientWidth - margin.left - margin.right;
+      let height = box.clientHeight - margin.top - margin.bottom;
 
       // append the svg object to the body of the page
       const svg = d3
@@ -559,6 +565,7 @@ function populateInteractiveGraph(movies) {
         .call(d3.axisBottom(x))
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("font-size", "11.5px")
         .style("text-anchor", "end");
 
       // Add Y axis
@@ -603,7 +610,14 @@ function populateInteractiveGraph(movies) {
           }
         });
 
-      // Original Movies Circles
+      
+        var div = d3
+          .select("#interactive-graph")
+          .append("div")
+          .attr("id", "tooltip")
+          .style("opacity", 0);
+      
+        // Original Movies Circles
       svg
         .selectAll("mycircle")
         .data(moviePairData)
@@ -616,7 +630,29 @@ function populateInteractiveGraph(movies) {
         })
         .attr("r", "10")
         .style("fill", originalMoviesColor)
-        .attr("stroke", "black");
+        .attr("stroke", "black")
+        .on('mouseenter', function (d,i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '.75');
+    
+          div.transition().duration(50).style("opacity", 1);
+          let str = "Original: " +i.title + " Rating: " + i.originalRating;
+          div
+            .html(str)
+            .style("left", d.pageX + 10 + "px")
+            .style("background-color", originalMoviesColor)
+            .style("top", d.pageY - 15 + "px"); 
+              
+            })
+        .on('mouseout', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '1');
+
+              div.transition().duration(50).style("opacity", 0);
+              
+              });
 
       // Movie Remake Circles
       svg
@@ -631,7 +667,23 @@ function populateInteractiveGraph(movies) {
         })
         .attr("r", "10")
         .style("fill", movieRemakesColor)
-        .attr("stroke", "black");
+        .attr("stroke", "black")
+        .on("mouseenter", function (d, i) {
+          d3.select(this).transition().duration("50").attr("opacity", ".75");
+
+          div.transition().duration(50).style("opacity", 1);
+          let str = "Remake: " + i.title + " Rating: " + i.remakeRating;
+          div
+            .html(str)
+            .style("left", d.pageX + 10 + "px")
+            .style("background-color", movieRemakesColor)
+            .style("top", d.pageY - 15 + "px");
+        })
+        .on("mouseout", function (d, i) {
+          d3.select(this).transition().duration("50").attr("opacity", "1");
+
+          div.transition().duration(50).style("opacity", 0);
+        });
     });
   });
   
