@@ -360,11 +360,11 @@ display: none;
 }
 
 #variable-container{
-    background-color: var(--white);
-    min-height: 200px;
+    background-color: var(--pinkHighlight);
+    min-height: 150px;
     width: inherit;
     border-radius: 5px;
-    border-color: var(--pinkHighlight);
+    border-color: var(--purpleButton);
     border-style: solid;
     border-width: 1px;
     text-align: center;
