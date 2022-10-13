@@ -497,7 +497,8 @@ d3.tsv("data.tsv", function (data) {
 });
 
 function populateInteractiveGraph(movies) {
- 
+  var svg;
+  
   d3.csv("titleData.csv", function (data) {
     //console.log(movies.length);
    
@@ -538,16 +539,17 @@ function populateInteractiveGraph(movies) {
       let width = box.clientWidth - margin.left - margin.right;
       let height = box.clientHeight - margin.top - margin.bottom;
 
+      box.innerHTML='';
       // append the svg object to the body of the page
-      const svg = d3
+      svg = d3
         .select("#interactive-graph")
-        //.select(graphToPopulate)
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
+      //svg.selectAll("*").remove();
       // X axis
       const x = d3
         .scaleBand()
@@ -690,3 +692,49 @@ function populateInteractiveGraph(movies) {
 }
 
 populateInteractiveGraph(originalDisplay);
+
+function shuffleMovies(){
+  let indexHolder = [];
+  let newMovies = [];
+  
+  for (let index = 0; index < 10; index++) {
+    let x = Math.floor(Math.random() * 136);
+    //console.log(x);
+    indexHolder.push(x);
+  }
+
+  indexHolder.sort((a,b)=>a-b);
+  //console.log(indexHolder);
+
+  //let currentInt = indexHolder[0];
+  let currentIndex = 0;
+  //console.log(currentInt); 
+  let index = 0;
+  moviePairData = [];
+  d3.csv("titleData.csv", function (data) {
+    
+
+    if (index == indexHolder[currentIndex]) {
+      //console.log(index);
+      var movieTitle = data.Title;
+      var originalID = data.Original;
+      var remakeID = data.Remake;
+      let movie = new MoviePair(movieTitle, originalID, remakeID);
+      //newMovies.push(movie);
+      moviePairData.push(movie);
+      ++currentIndex;
+    }
+     
+    ++index;
+    //console.log(index);
+  }).then(function (data) {
+    //console.log(newMovies);
+    if (moviePairData.length>9) {
+      populateInteractiveGraph(newMovies);
+    } else {
+      shuffleMovies();
+    }
+    
+   
+  });
+}
