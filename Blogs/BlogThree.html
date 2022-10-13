@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <script src="../navigate.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" name="" id="check" />
+            <label for="check" class="burger-button"><span class="material-symbols-outlined">
+                    menu
+                </span></label>
+    
+            <ul id="nav-list">
+                <li>
+                    <a href="#"  id="home" onclick="navigateTo('home',1)">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="blog" class="active" onclick="navigateTo('blog',1)">Blog</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="#" id="design" onclick="navigateTo('design',1)">Design</a>
+                </li>
+                <li>
+                    <a href="#" id="data-art" onclick="navigateTo('data-art',1)">Data Art</a>
+                </li>
+                <li>
+                    <div id="data-vis-button">
+                        <a href="#" id="data-vis" onclick="navigateTo('data-vis',1)">Data Visualisation ></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="blog-post-main">
+        <h1>Close Reading - What is Interaction for Data Visualization? </h1>
+        
+        <h2>Introduction</h2>
+        <p>TThis is a critical reading of What is Interaction for Data Visualization? by Evanthia Dimara and Charles Perin. I begin by summarising the paper and then critically engaging with its contents and information from other sources.</p>
+        
+        <h2>The Importance of Interaction</h2>
+        <p>The paper is clear to proclaim that interaction is fundamental to data visualisation. However, though it is so central to data visualisation, interaction has not been concretely defined by the community. And so the paper sets out do this task (Dimara & Perin, 2019).</p>
+        
+        <p>I agree that interaction is important to data visualisation, as at its core the function of any data visualisation is the transference of information to the user. And we know from pedagogy of how humans learn that active learning is the best for information retention (What is Interactive Data Visualization? | HEAVY.AI, 2022). So, a static visualisation that allows no interaction will be less effective than a visualisation that allows the user to interact with it. </p>
+
+        <p>
+            I feel that the paper could spend a bit more time expanding on why interaction is important to data visualisation, it relies too heavily on the reader having a prior understanding of this importance. There are many benefits to interactive data visualisations that could have been stated, such as allowing the user to identify trends faster, see relationships more easily, and comprehend complex data faster (What is Interactive Data Visualization? | HEAVY.AI, 2022).
+        </p>
+
+        <h2>Methodology</h2>
+        <p>
+            Their methodology was to contact academic experts in the field of data visualisation and ask them for a list of papers that define interaction in terms of data visualisation. From that list they applied a recursive methodology of acquiring other peer-reviewed papers that have forward or backward references to the original list. Finally they scaled this list down by selecting only papers that had a good enough impact and relevance by their definition (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            Having narrowed it down to a selection of 59 peer reviewed papers, they then reviewed all of these papers and extrapolated the commonalities in their definitions of interaction for data visualisation as well as critiqued them. And from that the built their definition of interaction for data visualisation (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            Given that they intended to create a definition from an academic standpoint this methodology is sufficient for their purposes. It Is worth noting however, that the limitations they will come to with this methodology is only having access to definitions that the researchers they contacted have come across. But this would leave out academics from other parts of the world creating a bias in their findings.
+        </p>
+
+        <h2>Components of Interaction </h2>
+        <p>
+            Among many papers interaction was identified as an elusive and overloaded term which is challenging to define. However, the papers did come to define some core components of interaction in data visualisation: external entities, internal entities, external actions and internal actions. What these entail is expanded on below (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            The two main external entities are the users and the data, with the data being the user’s main object of interest in the data visualisation. External entities can also include hardware such as the mouse and keyboard that the user uses. Internal entities refer to the internal activities that take place in order for the user to interact with the data visualisation such as a data-oriented intent that motivates the user’s actions, prior knowledge of the system, and user’s abilities and level of skill. External actions are the input or actions that the user performs on the system, such as changing the data or filtering and aggregating the data and ither forms changing the visualisation and how it presents information. Internal actions are the analytical and critical reasoning actions taken on the data by the user’s cognitive processes. Internal actions include but are not limited to memory encoding, information processing and reasoning (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            The community has come to a good consensus on these four important components of interaction in data visualisation. I agree that these components are important to interaction. Building off from these components one can begin to design good interaction for their visualisations. An exploration of these four components, to me, is even more important than knowing the definition of interaction in order to build good and effective interaction.  But the authors do state that their definition is for the purpose of giving the data visualisation community a thinking tool to reason about interaction instead of a practical tool to making good interactions.
+        </p>
+
+        <h2>Properties of Interaction</h2>
+        <p>
+            Interaction for visualisation is also cited to have the following properties: granularity, continuity, and directness. Granularity refers to the level that the interaction takes place on, with mouse clicks being at the micro-level and hypothesis generation being at the macro-level. Interaction can either continuous or discrete, with continuous interaction referring interactions that happen over a span of time with intermediate visualization states being displayed between that start state and the goal state. And with discrete interaction the action and reaction from the system happen at distinct times, like clicking a checkbox to apply filtering to the visualization. Finally direct and indirect interaction refers to whether the user is manipulating the raw data directly using the command-line interfaces or is given widgets that allow them to manipulate the data (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            The paper concisely and concretely describes the properties of interaction. Giving the reader a good sense of the ways that interaction can be categorised and thought about. However, it is unfortunate that these properties of interaction do not go on to playing a part in their definition of interaction. I think that the space taken to expand on these properties (which end up just forming supplementary information) could have been dedicated to going through the value and importance of interaction in data visualisation.
+        </p>
+
+        <h2>Definition of Interaction by the Papers</h2>
+        <p>
+            To summarize the common view of interaction raised by the papers they reviewed, the paper states that interaction is a dialogue between the human user and the visualization system, which often has low internal and external flexibility which limits the expressions of the users’ intents. While it appears the community knows little about interaction design, as they focus on complex data analysis objectives, and overlook the larger scope of possible interactions (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            I love that they explain what the common definition offered by the papers they reviewed lacks, namely flexibility. This is important because they go on to expand on the importance of flexibility in interaction as well as give a definition for it. Pointing put what is lacking in this definition helps to give their continued search for a definition purpose, otherwise the reader would wonder why they didn’t just stop after getting this definition from the papers.
+        </p>
+
+
+        <h2>Definition of Interaction by the Researchers</h2>
+        <p>
+            After reviewing how the field of human computer interaction (HCI) defines interaction and limiting it to interaction with data visualisations as well as adjusting the definition raised by the visualization community to account for its shortcomings, the authors landed on the following definition: “Interaction for visualization is the interplay between a person and a data interface involving a data-related intent, at least one action from the person and an interface reaction that is perceived as such.” (Dimara & Perin, 2019: 8).
+        </p>
+
+        <p>
+            Expanding on important terms in the definition, interplay is a reference to the dialogue that must take place between the person and the data interface. With person being a gender-neutral term that can also refer to non-human entities. The data visualization system is referred to as the data interface, which can include non-digital visualisations. The data interface can include hardware such as computers and other abstracted concepts that are not the user, such as knowledge. (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            Action is performed by the user and the reaction from the data interfaced must be perceived as a reaction by the person to be considered as such. There is no time limit for when the reaction must occur for it to be considered a reaction, but it must be perceived by the person. And finally, the intent must be data-related to relate this definition to data visualisation (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            Their definition is very strong and touches on the important components of interaction listed earlier. However, a query I have with the definition is the use of the term ‘person’ they use this word for its gender-neutral quality and extend it to non-human entities. But this is counter-intuitive since the word person is loaded with human implications, while the word user is used commonly in software to refer to human and non-human entities and is also gender neutral. The word user would have been a better pick for the definition.
+        </p>
+
+        <h2>Flexibility</h2>
+        <p>
+            The paper goes on to define “flexibility within a data interface is the number of distinct, allowable actions of a person on the interface, as well as the number of interaction means with which the person can perform each action.” An action is considered allowable if the data interface allows at least one means of interaction with that action (Dimara & Perin, 2019). 
+        </p>
+
+        <p>
+            This definition is also very good but not as thoroughly explored and expanded upon as the definition for interaction. This is not too egregious as the paper does state that its purpose is to find a definition for interaction in data visualisation.
+        </p>
+
+        <h2>Limitations</h2>
+        <p>
+            Finally, the paper talks about its limitations. Starting off by stating that their definition is only one of a possible many, and that their definition does not cater for interactions that do not have intent. There are also a lot of papers they left out of their review due to their selection method and physical limitations. And of the researchers included majority were senior researchers. Furthermore, their methodology does not include input from working professionals and incidental visualists (Dimara & Perin, 2019).
+        </p>
+
+        <p>
+            The authors do a very good job in assessing and being aware of their limitations and even their biases. For further research I would say they should explore getting definitions, properties, and components of interaction from working professionals. Since these people have in field knowledge of interactions and the users, which goes further than just thinking and theorising about interaction.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            The authors did a very good job at getting to a comprehensive definition for interaction. The biggest critiques would be their selection bias, their use of the word ‘person’ and the fact that their definition is focused on been a thinking tool and not a practical tool.
+        </p>
+
+        <p>
+           The paper also does a good job of expressing and showcasing the common consensus among the visualisation community of things such as the properties and components of interaction in data visualisation. 
+        </p>
+
+        <h2>References</h2>
+        <p>E. Dimara, C. Perin. 2019.  What is Interaction for Data Visualization?. IEEE Transactions on Visualization and Computer Graphics, Institute of Electrical and Electronics Engineers, 2020, 26 (1), pp.119 - 129. 10.1109/TVCG.2019.2934283. hal-02197062
+        </p>
+        
+        <p>Healey, C., 2012. Perception in Visualization. [online] Csc2.ncsu.edu. Available at:
+            https://www.csc2.ncsu.edu/faculty/healey/PP/</p>
+        
+        <p>Heavy.ai. 2022. What is Interactive Data Visualization? | HEAVY.AI. [online] Available at: https://www.heavy.ai/technical-glossary/interactive-data-visualization  </p>
+        
+        
+    </main>
+
+    
+
+</body>
+</html>
