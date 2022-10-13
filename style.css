@@ -318,6 +318,23 @@ display: none;
     margin-left: 30px;
 }
 
+#graph2 {
+    background-color: var(--white);
+    height: 600px;
+    width: inherit;
+    border-radius: 5px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#graph-section h2{
+    text-align: center;
+}
+
 #legend{
     background-color: var(--white);
     height: 200px;
