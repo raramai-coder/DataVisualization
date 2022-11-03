@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <script src="../navigate.js"></script>
+    <title>Blog Four</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" name="" id="check" />
+            <label for="check" class="burger-button"><span class="material-symbols-outlined">
+                    menu
+                </span></label>
+    
+            <ul id="nav-list">
+                <li>
+                    <a href="#"  id="home" onclick="navigateTo('home',1)">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="blog" class="active" onclick="navigateTo('blog',1)">Blog</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a href="#" id="design" onclick="navigateTo('design',1)">Design</a>
+                </li>
+                <li>
+                    <a href="#" id="data-art" onclick="navigateTo('data-art',1)">Data Art</a>
+                </li>
+                <li>
+                    <div id="data-vis-button">
+                        <a href="#" id="data-vis" onclick="navigateTo('data-vis',1)">Data Visualisation ></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="blog-post-main">
+        <h1>Critical Reflection of My Data Art </h1>   
+        
+        <h2>Introduction</h2>
+        <p>
+            I begin this critical analysis of my data art artifact by defining data art, then giving a description of 
+what my artifact was, my intentions with the artifact. As well as how my artifact incorporates 
+elements of story in it, how explanation and exploration are expressed through it. I further go on to 
+list data art artifacts that inspired my work and finally I conclude by discussing the successes and 
+failures of my artifact.
+        </p>
+
+        <h2>
+            What is Data Art ?
+        </h2>
+        <p>
+Defining art is a difficult task, as can be expected so is the task of defining data art. For the sake of 
+having a concrete working definition that avoids unnecessary ruminations on philosophy, I will 
+define data art as defined by Viegas and Wattenberg in their 2007 paper Artistic Data Visualization 
+Beyond Visual Analytics.
+        </p>
+
+        <p>
+            They define data art as any visualisation of data that is done by an artist with the intent of making 
+art (Viegas & Wattenberg, 2007). There is special emphasis placed on artistic intention and the raw 
+materials for the art being a data set. 
+        </p>
+
+        <h2>My Artifact</h2>
+
+        <p>
+            The data set that I worked with was the IMDB film database. From it I acquired user ratings (with 
+users constituting of formal critics and regular audience viewers), of original films and the remakes 
+based on these films.
+        </p>
+
+        <p>
+            Given the dataset and my intended message I decided that making a digital visual artifact inspired by 
+the film medium would be the best way to go, hence I made an artistic video.
+        </p>
+
+        <p>
+            I began by creating a C++ terminal run program that would output the title of a film, its original 
+rating, followed by the remake rating and a conclusion based on this rating. If the original had a 
+higher rating it outputted “The original was better”, if the remake had a higher rating it outputted 
+“The remake was better”, and lastly if they had the same rating it outputted, “They were the same 
+but still”. 
+        </p>
+
+        <p>
+            Thereafter I ran the program and screen recorded the terminal output of all the films as video. I 
+edited this video in Adobe Premiere Pro to reach my desired artifact. I began by adding a collage edit 
+of notable Hollywood film production companies’ intros, to signal to the viewer that what they are 
+about to watch is related to the film industry. And then I slowed down the terminal output so that it 
+could be at a readable pace. Finally, I put the terminal output in a repeating loop for 90 minutes, the 
+average runtime of a Hollywood film.
+        </p>
+
+        <h2> Artistic Intent</h2>
+        <p>
+            Data Art has the characteristic of being made with artistic intention, which is often intertwined with 
+commentary on whatever phenomenon the artist wishes to speak over (Grugier, 2016).
+        </p>
+
+        <p>
+            My intention was to artistically create critical commentary on the modern Hollywood film industry’s 
+affinity for producing unoriginal and uninspired remakes, sequels, and reboots. That some have 
+termed ‘pure exploitation films’ (Haanaes, 2022). 
+        </p>
+
+        <p>
+            There is a visible trend of Hollywood overexploiting successful franchises all the while 
+underexploring new ideas, concepts and stories (Haanaes, 2022). This means more and more 
+resources are being funnelled into making these uninspired remakes that only bring small 
+incremental changes to the story. Which is a great loss, for film lovers and audiences, as well as 
+passionate filmmakers who have now been starved of the opportunity to tell creative original 
+stories. And the audiences who likewise have been starved of the opportunity to experience these 
+original creative stories.
+        </p>
+
+        <p>
+            My intention was to convey that audiences who watch these films enjoy them less than the original, 
+critics who see them find them to be no better than the originals as well as to express the 
+overwhelming, uninteresting, and looping nature of this imitative design practice. 
+        </p>
+
+        <p>
+            I set out to achieve this by firstly, showing the viewer the difference in ratings which swayed 
+positively towards the originals being better rated in most cases. Signalling to them the magnitude 
+of this phenomenon, as they see film after film that this trend is consistent. 
+        </p>
+
+        <p>
+            Furthermore, the video loops for 90 minutes going over the same 130 films, with no changes or 
+additions to the output on each iteration. This is to mimic how the film industry is outputting 
+repetitive content that has no substantial difference from the original. As well as how cyclic and 
+uninventive this is. 
+        </p>
+
+        <p>
+            Lastly, when the viewer first plays the videos, the montage of film production intros signals to them 
+that what is to follow is going to be entertaining, but they are instead left with a video that loops 
+over the same terminal output with no significant entertainment value.
+        </p>
+
+        <p>
+            All of this was done to express the uninventiveness and frustration of the artist at Hollywood’s 
+bombardment of cinemas with uninspired repetitive remakes. Additionally, work focusses less on 
+aesthetics and spectacle, and more delivering critical commentary which directly opposes the nature 
+of Hollywood remakes. Which place heavy emphasis on aesthetics, spectacle, and nostalgia, over 
+having a meaningful story or commentary.
+        </p>
+
+        <h2>
+            My Artifact as Story
+        </h2>
+
+        <p>
+            In order to communicate my intention effectively I had to create it through the lens of storytelling. 
+Here I explored data storytelling which is defined as the act of effectively communicating an insight 
+and a narrative about a dataset through visualisation (Foster, 2022).
+        </p>
+
+        <p>
+            As with any good story the following elements are key: main character, setting, narrator’s voice, plot 
+(Foster, 2022). 
+        </p>
+
+        <p>
+            In my artifact the main character is the dataset, namely being the ratings of the originals and the 
+ratings of the remakes. The setting is the terminal window, where all of this data is outputted and 
+my main character shines. The narrators’ voice is present in every conclusion outputted after 
+outputting the ratings, such as “the remake was better”. 
+        </p>
+
+        <p>
+            And finally, the plot. The plot consists of three elements that repeat in a loop. These elements can 
+be thought of as the act progression of the story. The first act is when the title of the film shows up 
+and the viewer is given an introduction and a context of what is to follow. The second act is the 
+rating of the original versus the rating of the remake being outputted. This is the rising action to the 
+third act and the climax which is the concluding statement: that the original was better. And this 
+starts all over again for the next film being outputted.
+        </p>
+
+        <h2>Explanation versus Exploration in my Artifact</h2>
+
+        <p>
+            In data visualisation, exploration and explanation of the data set are key to expressing clear and 
+comprehensible data driven stories (Thudt et al., 2018). Exploration is the quality of a visualisation to 
+provide viewers with the ability to ask, experience and personalise their experience and perspective 
+of the data. Whilst explanation is the quality of a visualisation to deliberately communicate the 
+author’s interpretation or message about the data (Thudt et al., 2018).
+        </p>
+
+        <p>
+            In regard to exploration, it is clear to see how a data set that is in an interactive medium can provide 
+exploration by allowing the viewer to change the data points in the presentation through filtration 
+for example. But my artifact is in the non-interactive medium of video, so exploration is limited in 
+that sense. However, due to the large number of film remakes being shown, this allows the user to 
+explore different films time and time again, as they process each individual film.
+        </p>
+
+        <p>
+            My artifact leans heavily on explanation, not only through text but through form as well. Explaining 
+that the originals are better through direct communication using text and explaining the looping and 
+uninventive nature of Hollywood’s remake spewing practices through the form of the artifact and 
+the creative decisions it takes on.
+        </p>
+
+        <h2>Inspirations</h2>
+
+        <p>
+            The following data art pieces served as inspiration and thinking points for my own artifact.
+        </p>
+
+        <h3>Flight Patterns – Aaron Koblin (2009) </h3>
+        <p>
+            An artistic video that visualises air traffic, representing North American travel communication 
+through movement, form, and colour (Grugier, 2016). Similarly the artist used Adobe’s software 
+products to create a videographic artifact that tells the story of the data set.
+        </p>
+
+        <p>
+            I was inspired by how he transformed numbers into visually stimulating movement and colour, in 
+way that is hypnotic and could be viewed in a never-ending loop. Building from this I got the idea of 
+an infinite loop of sorts to implement in my own artifact.
+        </p>
+
+        <h3>Bicycle Built for Two Thousand – Aaron Koblin & Daniel Massey (2009)</h3>
+        <p>
+            This is videographic artifact that focuses on audio data, wherein 2088 voice recordings of Amazon 
+workers who recorded themselves imitating a specified sound are visualised (Grugier, 2016).
+        </p>
+
+        <p>
+            I was inspired by how the creators used the power of montage to tell a cohesive story, building from 
+this I got the idea for the opening montage.
+        </p>
+
+        <h3>data.set – Antonio Roberts (2016)</h3>
+        <p>
+            This visualisation opts away from visualising a comprehensible data visualisation, but rather an 
+experience. And the chosen experience is that of overwhelm. With bright highly saturated pixels 
+populating the artifact, giving the effect of colourful noise.
+        </p>
+
+        <p>
+From this I gathered the inspiration of communicating an experience beyond its comprehension, 
+which fed into the inspiration of doing an infinite loop, which does directly help the understanding of 
+the data set but communicates the overwhelming and cyclic nature of the Hollywood remakes 
+phenomenon.
+        </p>
+
+        <h2>Successes and Failures of my Artifact</h2>
+
+        <p>
+            In terms of successes, I feel that my artifact manages to convey the clear narrative of the original 
+films being better than the remakes. It also communicates well in its form the uninteresting and 
+repressive nature of the remakes being produced. Doing a good job of showcasing its repetitiveness 
+and boringness, and how that is antithetical to the film medium which is built for entertainment.
+        </p>
+
+        <p>
+            In terms of failures, I believe I could have added more in terms of the concluding statements and 
+featured a short review from an IMDB critic or user about the remake in comparison to the original. 
+Which would give the viewer more information to explore in terms of the artifact.
+        </p>
+
+        <h2>References</h2>
+
+        <p>
+            Foster, W. (2022) Data is an art, not just a science-and storytelling is the key, Shopify. 
+Available at: https://shopify.engineering/data-storytelling-shopify
+        </p>
+
+        <p>
+            Generative and data-driven art · variable - new ways of experiencing data: 
+Https://variable.io (no date) · Variable - new ways of experiencing data | https://variable.io. 
+Available at: https://variable.io/generative-and-data-art/ 
+        </p>
+
+        <p>
+            Grugier, M. (2016) The digital age of data art, TechCrunch. Available at: 
+https://techcrunch.com/2016/05/08/the-digital-age-of-data-
+art/?guccounter=1&amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_
+referrer_sig=AQAAAFI8nkj3NMk70pKpQmsrPEmFt3f-
+Jc1AtbhvWHka4clznMe1MpUbKggF1Y7mOz1I7kBD6krgrqYFLAHT5laUVfE-
+tzABxcGjM8HmaGv61hCf_EG1pBmGqz2V7HeN8_9gdXyEf3eFfksgQkjdryK1RRevX7raExA6ah
+u0EcfG94hW 
+        </p>
+
+        <p>
+            Haanaes, K. (2022) Déjà Vu: Is the film industry's sequel and remake addiction a sign of the 
+end?, IMD business school for management and leadership courses. Available at: 
+https://www.imd.org/research-knowledge/articles/deja-vu-is-the-film-industrys-sequel-
+and-remake-addiction-a-sign-of-the-end/ 
+        </p>
+
+        <p>
+            Kathy (2017) Data.set - data as culture - ODI - the open data institute, Data as Culture. 
+Available at: https://culture.theodi.org/data-set/ 
+        </p>
+
+        <p>
+            Liden. (2022) What is data visualization art?, Musical Expert. Available at: 
+https://www.musicalexpert.org/what-is-data-visualization-art.htm
+        </p>
+
+        <p>
+            Littledale, A. and Robbins, H. (no date)  live TV related content, DataArt - live TV related 
+content. Available at: https://data-art.net/tvrelatedcontent/ 
+        </p>
+
+        <p>
+            Thudt, A., Walny, J., Gschwandtner, T., Dykes, J., Stasko, J. (2018). Exploration and 
+Explanation in Data Driven Storytelling. Taylor and Francis Group.
+        </p>
+
+        <p>
+            Viegas, B., Wattenberg, M. (2007) Artistic Data Visualization: Beyond Visual Analytics. Visual 
+Communication Lab. IBM Research. 
+        </p>
+
+    </main>
+
+    </body>

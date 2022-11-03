@@ -3,5 +3,10 @@
   "editor.formatOnPaste": true,
   "files.associations": {
     "iostream": "cpp"
-  }
+  },
+  "prettier.useTabs": true,
+  "prettier.proseWrap": "always",
+  "prettier.enableDebugLogs": true,
+  "editor.codeLens": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
