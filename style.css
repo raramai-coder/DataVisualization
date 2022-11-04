@@ -303,6 +303,13 @@ display: none;
     /* grid-column-end: 2;  */
     grid-row-start: 3;
     padding: 15px;
+    border-radius: 15px;
+    border-color: var(--pinkHighlight);
+}
+
+#code-link{
+    color: var(--purpleHighlight);
+    text-decoration: underline;
 }
 
 #main-content{
