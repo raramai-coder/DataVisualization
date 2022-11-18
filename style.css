@@ -392,8 +392,11 @@ display: none;
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #04AA6d;
+    background: #efc4df;
     cursor: pointer;
+    border-radius: 15px;
+    border-color: #c867a5;
+    border-style: solid;
 }
 
 .slider::-moz-range-thumb{
