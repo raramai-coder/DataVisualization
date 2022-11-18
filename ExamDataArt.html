@@ -50,11 +50,46 @@
     <figure id="game-container">
         <figure id="rules-container">
             <h4>Rules</h4>
+            <p>
+                1. Select the film you think 
+                had a better rating.
+                
+            </p>
+            <p>
+                2. Move the scale to indicate
+                the difference you think the 
+                rating was.
+            </p>
+            <p>
+                3. Submit and get your score
+            </p>
             <h4>Scoring</h4>
+            <p>
+                -2 for wrong movie selected
+            </p>
+            <p>
+                + 1 for right movie selected
+            </p>
+            <p>
+                +2 for score < 0.5 off
+            </p>
+            <p>
+                +1 for score < 1 off
+            </p>
+            
         </figure>
 
         <section id="play-area">
             <h3>Ghost in a Shell</h3>
+            <div id="buttons-container">
+                <button>Original</button>
+                <button>Remake</button>
+            </div>
+            <p>2.6</p>
+            <div class="slide-container">
+                <input type="range" min="0" max="5" value="2.6" class="slider" id="myRange">
+            </div>
+            <div id="enter-input"></div>
         </section>
 
         <section id="scoreboard">
