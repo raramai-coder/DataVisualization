@@ -4,10 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="navigate.js"></script>
     <title>Data Art</title>
 </head>
 <body>
     
-        
+    <header>
+        <nav>
+            <input type="checkbox" name="" id="check" />
+            <label for="check" class="burger-button"><span class="material-symbols-outlined">
+                    menu
+                </span></label>
+    
+            <ul id="nav-list">
+                <li>
+                    <a href="#"  id="home" onclick="navigateTo('home',0)">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="blog" onclick="navigateTo('blog',0)">Blog</a>
+                </li>
+                <li>
+                    <a href="#" id="design" onclick="navigateTo('design',0)">Design</a>
+                </li>
+                <li>
+                    <a href="#" id="data-art" class="active" onclick="navigateTo('data-art',0)">Data Art</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <div id="data-vis-button">
+                        <a href="#" id="data-vis" onclick="navigateTo('data-vis',0)">Data Visualisation ></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <figure id="game-container">
+        <figure id="rules-container">
+            <h4>Rules</h4>
+            <h4>Scoring</h4>
+        </figure>
+
+        <section id="play-area">
+            <h3>Ghost in a Shell</h3>
+        </section>
+
+        <section id="scoreboard">
+            <h4>Score: 3</h4>
+        </section>
+    </figure>
 </body>
 </html>

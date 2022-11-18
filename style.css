@@ -326,6 +326,26 @@ display: none;
     grid-column-end: 5; 
 }
 
+#game-container{
+    display: grid;
+    gap: 50px;
+    margin-top: 100px; 
+}
+
+#rules-container{
+    grid-column-start: 1;
+    grid-column-end: 2; 
+}
+
+#play-area{
+    grid-column-start: 2;
+    grid-column-end: 5; 
+}
+
+#scoreboard{
+    grid-column-start: 5;
+    grid-column-end: 8; 
+}
 /* #endrgion */
 
 /* #region Data Visualisation */
