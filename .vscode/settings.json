@@ -8,5 +8,6 @@
   "prettier.proseWrap": "always",
   "prettier.enableDebugLogs": true,
   "editor.codeLens": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleAttributePerLine": true
 }
