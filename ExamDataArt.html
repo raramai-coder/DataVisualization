@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="normalize.css" />
     <script src="navigate.js"></script>
+    <script src="dataArtGame.js"></script>
     <title>Data Art</title>
 </head>
 <body>
@@ -47,6 +48,11 @@
         </nav>
     </header>
 
+     <section id="design-toggle">
+            <div id = "unselected"><a href="../Design.html">Data Art 1</a></div>
+            <div id="selected">Data Art 2</div>
+    </section>
+    
     <figure id="game-container">
         <figure id="rules-container">
             <h4>Rules</h4>
@@ -82,13 +88,16 @@
         <section id="play-area">
             <h3>Ghost in a Shell</h3>
             <div id="buttons-container">
-                <button>Original</button>
-                <button>Remake</button>
+                <button class="film-selections">Original</button>
+                <button class="film-selections">Remake</button>
             </div>
-            <p>2.6</p>
+            <p id="diff">2.6</p>
             <div class="slide-container">
-                <input type="range" min="0" max="5" value="2.6" class="slider" id="myRange">
+                <input type="range" min="0" max="5" value="2.6" class="slider" 
+                id="myRange" step="0.1"
+                oninput="diff.innerText = this.value">
             </div>
+            <!-- <p id="diff"></p> -->
             <div id="enter-input"></div>
         </section>
 

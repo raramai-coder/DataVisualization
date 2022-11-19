@@ -350,6 +350,18 @@ display: none;
     border-radius: 5px;
     border-width: 1px;
     padding: 10px;
+    text-align: center;
+}
+
+#play-area h3{
+    color: #c8164c;
+    font-size: 30px;
+}
+
+.film-selections{
+    border-color: #c867a5;
+    border-radius: 8px;
+    background: var(--white);
 }
 
 #scoreboard{
@@ -367,17 +379,26 @@ display: none;
     width: 25px;
     height: 25px;
     margin: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#diff{
+    /* margin: auto; */
+    align-self: center;
+    margin-top: 20px;
 }
 
 .slider-container{
     width: 100%;
+    margin-top: 20px;
 }
 
 .slider{
     appearance: none;
     width: 100%;
-    height: 25px;
-    background: #d3d3d3;
+    height: 10px;
+    background: #e4d0dc;
     outline: none;
     opacity: 0.7;
     -webkit-transition: 0.2s;
@@ -404,6 +425,14 @@ display: none;
     height: 25px;
     background: #04AA6d;
     cursor: pointer;
+}
+
+#buttons-container{
+   margin-top: 20px;
+   padding: 20px; 
+   display: flex;
+   align-content: space-between;
+   align-items: center;
 }
 /* #endrgion */
 
