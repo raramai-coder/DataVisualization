@@ -6,6 +6,7 @@
     --pinkHighlight: #FF94D8;
     --white:#FFF;
     --grey:#707070;
+    --fontgrey:#3c3838;
     --movie1:url("../art-assets/12-angry-men-british-movie-poster.jpg");
     --movie2:url("../art-assets/a-nightmare-on-elm-street-movie-poster (1).jpg"); 
     --movie3:url("../art-assets/aladdin-movie-poster (2).jpg"); 
@@ -24,8 +25,12 @@
 body{
     height: 100vh;
     background-color: var(--pinkBackground);
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
     /* overflow: hidden; */
+    /* font-family: 'Abril Fatface'; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--fontgrey);
 }
 
 h1{
@@ -34,11 +39,22 @@ h1{
     float: inline-start;
     /* font-family: 'Abril Fatface', cursive; */
     font-family: 'Aboreto', cursive;
+    /* font-family: 'Lato', sans-serif;  */
+    color: var(--black);
+}
+
+h2, h3{
+   font-family: 'Aboreto', cursive;
+   color: var(--black);
 }
 
 a{
     text-decoration: none;
     color: var(--black);
+}
+
+p{
+    font-size: 18px;
 }
 
 /* #region Home Page */
@@ -63,6 +79,16 @@ a{
     margin-top: 150px;
     /* grid-row-start: 1;
     grid-row-end: 3; */
+}
+
+#text-section p{
+    font-size: 18px;
+}
+
+#emph-text{
+    font-size: 28px !important;
+    /* color: var(--pinkHighlight); */
+    color: #493543;
 }
 
 #image-section{
@@ -310,8 +336,10 @@ top: 0;
 
 #nav-list li a{
     text-decoration: none;
-    color: var(--black);
+    color: var(--fontgrey);
     font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #data-vis{
@@ -643,6 +671,8 @@ background-color: var(--grey);
     width: inherit;
 }
 
+
+
 .blog-image {
     grid-column: 4/5;
     width: inherit;
@@ -784,6 +814,7 @@ background-color: var(--grey);
     #nav-list li a {
         font-size: 25px;
         color: var(--black);
+        
     }
 
     #check:checked~ul{
