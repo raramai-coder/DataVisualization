@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Lato:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize.css" />
-    <script src="navigate.js"></script>
-    <script src="dataArtGame.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="../navigate.js"></script>
+    <!-- <script src="dataArtGame.js"></script> -->
     <title>Data Art</title>
 </head>
 <body>
@@ -86,24 +87,27 @@
         </figure>
 
         <section id="play-area">
-            <h3>Ghost in a Shell</h3>
+            <h3 id="movie-title">Ghost in a Shell</h3>
             <div id="buttons-container">
-                <button class="film-selections">Original</button>
-                <button class="film-selections">Remake</button>
+                <button class="film-selections" id="0" onclick="pickMovie(0)">Original</button>
+                <button class="film-selections" id="1" onclick="pickMovie(1)">Remake</button>
             </div>
             <p id="diff">2.6</p>
             <div class="slide-container">
-                <input type="range" min="0" max="5" value="2.6" class="slider" 
+                <input type="range" min="0" max="5" value="2.5" class="slider" 
                 id="myRange" step="0.1"
-                oninput="diff.innerText = this.value">
+                oninput="storeRating()">
             </div>
             <!-- <p id="diff"></p> -->
-            <div id="enter-input"></div>
+            <button id="enter-input" onclick="calculateScore()">
+            </button>
         </section>
 
         <section id="scoreboard">
-            <h4>Score: 3</h4>
+            <h4 id="score-text">Score: 0</h4>
+            <div id="moviesPlayed"></div>
         </section>
     </figure>
 </body>
+<script src="dataArtGame.js"></script>
 </html>
