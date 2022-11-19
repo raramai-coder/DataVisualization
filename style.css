@@ -5,7 +5,20 @@
     --purpleHighlight: #A737FF;
     --pinkHighlight: #FF94D8;
     --white:#FFF;
-    --grey:#707070
+    --grey:#707070;
+    --movie1:url("../art-assets/12-angry-men-british-movie-poster.jpg");
+    --movie2:url("../art-assets/a-nightmare-on-elm-street-movie-poster (1).jpg"); 
+    --movie3:url("../art-assets/aladdin-movie-poster (2).jpg"); 
+    --movie4:url("../art-assets/beauty-and-the-beast-fposter-gallery-1.jpg");
+    --movie5:url("../art-assets/carrie-dvd-movie-cover.jpg");
+    --movie6:url("../art-assets/cleopatra-italian-movie-poster.jpg"); 
+    --movie7:url("../art-assets/aladdin-movie-poster (1).jpg"); 
+    --movie8:url("../art-assets/drishyam-indian-movie-poster.jpg");
+    --movie9:url("../art-assets/fantastic-four-movie-poster.jpg");
+    --movie10:url("../art-assets/psycho-movie-poster.jpg"); 
+    --movie11:url("../art-assets/scarface-movie-poster.jpg");  
+    --movie12:url("../art-assets/shaft-movie-poster.jpg"); 
+    --movie13:url("../art-assets/the-lion-king-movie-poster.jpg");  
 }
 
 body{
@@ -67,6 +80,16 @@ a{
     
 }
 
+#image-section div{
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.2s;
+}
+
+#image-section div:hover{
+    transform: scale(1.5);
+}
+
 /* #endregion */
 
 /* #region movie Posters */
@@ -79,6 +102,10 @@ a{
     border-width: 1px;
     border-style: solid;
     border-color: var(--grey);
+    background-image: var(--movie1);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img2 {
@@ -88,7 +115,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie2);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img3 {
@@ -98,7 +129,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie13);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img4 {
@@ -108,7 +143,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie11);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 #img5 {
@@ -119,6 +158,10 @@ a{
     border-width: 1px;
     border-style: solid;
     border-color: var(--grey);
+    background-image: var(--movie3);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img6 {
@@ -128,7 +171,12 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie12);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
 }
 
 #img7 {
@@ -138,7 +186,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie8);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img8 {
@@ -148,7 +200,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie5);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img9 {
@@ -158,7 +214,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie7);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img10 {
@@ -168,7 +228,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie4);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img11 {
@@ -178,7 +242,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--white);
+    background-image: var(--movie6);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #img12 {
@@ -188,7 +256,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie9);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 #img13 {
@@ -198,7 +270,11 @@ a{
     border-radius: 20px;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--grey);
+    border-color: var(--black);
+    background-image: var(--movie10);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
@@ -434,6 +510,7 @@ display: none;
    align-content: space-between;
    align-items: center;
 }
+
 /* #endrgion */
 
 /* #region Data Visualisation */
