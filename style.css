@@ -20,6 +20,11 @@
     --movie11:url("../art-assets/scarface-movie-poster.jpg");  
     --movie12:url("../art-assets/shaft-movie-poster.jpg"); 
     --movie13:url("../art-assets/the-lion-king-movie-poster.jpg");  
+    --blog1:url("../art-assets/Group 24.png");
+    --blog2:url("../art-assets/Group 25.png");
+    --blog3:url("../art-assets/Group 28.png");
+    --blog4:url("../art-assets/Group 29.png");
+    --blog5:url("../art-assets/Group 30.png");
 }
 
 body{
@@ -449,6 +454,68 @@ display: none;
     grid-row-end: 5; 
 }
 
+#design-toggle-art{
+    /* width: 30%; */
+    /* background-color: var(--white); */
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    height: 65px;
+    border-color: var(--pinkHighlight);
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+    grid-column-start: 2;
+    font-family: 'Aboreto', cursive;
+    color: var(--black);
+}
+
+#design-toggle-art2{
+    /* width: 30%; */
+    /* background-color: var(--white); */
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    height: 65px;
+    border-color: var(--pinkHighlight);
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+    /* grid-column-start: 2; */
+    font-family: 'Aboreto', cursive;
+    color: var(--black);
+   
+}
+
+#selected-art{
+    /* width: 50%; */
+    background-color: var(--pinkHighlight);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#unselected-art{
+    /* width: 50%; */
+    /* background-color: var(--pinkHighlight); */
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+#unselected-art a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+
 #info-box{
     border: var(--black);
     border-style: solid;
@@ -473,6 +540,8 @@ display: none;
     gap: 50px; 
     width: 90%;
     margin: auto;
+    margin-top: 125px;
+    /* padding: 20px; */
 }
 
 #main-content h1{
@@ -485,6 +554,8 @@ display: none;
     display: grid;
     gap: 50px;
     margin-top: 100px; 
+    /* grid-column-start: 1; */
+    /* grid-column-end: 3; */
 }
 
 #rules-container{
@@ -495,6 +566,8 @@ display: none;
     border-radius: 5px;
     border-width: 1px;
     padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 #play-area{
@@ -506,6 +579,8 @@ display: none;
     border-width: 1px;
     padding: 10px;
     text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 5;
 }
 
 #play-area h3{
@@ -527,6 +602,8 @@ display: none;
     border-radius: 5px;
     border-width: 1px;
     padding: 10px;
+    grid-column-start:5;
+    grid-column-end: 6;
 }
 
 #enter-input{
@@ -727,10 +804,10 @@ background-color: var(--grey);
 .blog-image {
     grid-column: 4/5;
     width: inherit;
-    background-color: var(--white);
+    /* background-color: var(--white);
     border-style: solid;
     border-width: 0.5px;
-    border-color: var(--grey);
+    border-color: var(--grey); */
     border-radius: 15px;
 }
 
@@ -754,6 +831,40 @@ background-color: var(--grey);
     align-content: center;
 }
 
+#blog1{
+    background-image: var(--blog1) ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#blog2{
+    background-image: var(--blog2) ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#blog3{
+    background-image: var(--blog3) ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#blog4{
+    background-image: var(--blog4) ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#blog5{
+    background-image: var(--blog5) ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 /* #endregion */
 
 /* #region Design Page */
