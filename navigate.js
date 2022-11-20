@@ -1,43 +1,43 @@
-function navigateTo(page,folders) {
-    let navLink = document.getElementById(page);
-    let siteURL = setSiteURL(folders);
+// function navigateTo(page,folders) {
+//     let navLink = document.getElementById(page);
+//     let siteURL = setSiteURL(folders);
 
-    switch(page){
-        case "home":
-        navLink.href = siteURL+"index.html";
-        break;
-        case "blog":
-        navLink.href = siteURL+ "Blogs.html";
-        break;
-        case "data-art":
-        navLink.href = siteURL+ "DataArt.html"; 
-        break;
-        case "data-vis":
-        navLink.href = siteURL+ "DataVisualisations/DataVis.html";
-        break;
-        case "design":
-        navLink.href = siteURL+ "Design.html";
-        break;
-        case "style":
-        navLink.href = siteURL+ "Design/styleGuide.html";
-        break;
-    }
-}
+//     switch(page){
+//         case "home":
+//         navLink.href = siteURL+"index.html";
+//         break;
+//         case "blog":
+//         navLink.href = siteURL+ "Blogs.html";
+//         break;
+//         case "data-art":
+//         navLink.href = siteURL+ "DataArt.html"; 
+//         break;
+//         case "data-vis":
+//         navLink.href = siteURL+ "DataVisualisations/DataVis.html";
+//         break;
+//         case "design":
+//         navLink.href = siteURL+ "Design.html";
+//         break;
+//         case "style":
+//         navLink.href = siteURL+ "Design/styleGuide.html";
+//         break;
+//     }
+// }
 
-function setSiteURL(folders) {
-    let siteURLPrefix = "";
+// function setSiteURL(folders) {
+//     let siteURLPrefix = "";
     
-    if(folders==0){
-        return siteURLPrefix;
-    }
+//     if(folders==0){
+//         return siteURLPrefix;
+//     }
 
-    for (let index = 0; index < folders; index++) {
-       siteURLPrefix += "../";
+//     for (let index = 0; index < folders; index++) {
+//        siteURLPrefix += "../";
         
-    }
+//     }
 
-    return siteURLPrefix;
-}
+//     return siteURLPrefix;
+// }
 
 const pages = [
 	{ url: "../index.html", name: "Home", id: "home" },
@@ -47,8 +47,7 @@ const pages = [
 	{ url: "../DataVisualisations/DataVis.html", name: "Data Visualisation >", id: "data-vis" },
 ];
 
-
-let navigationContainer = document.getElementById("nav-list");
+const navigationContainer = document.getElementById("nav-list");
 
 pages.forEach(element => {
     const listItem = document.createElement("li");
@@ -83,5 +82,3 @@ pages.forEach(element => {
     navigationContainer.append(listItem); 
   
 });
-
-//console.log(document.title);
