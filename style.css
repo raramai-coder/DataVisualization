@@ -717,6 +717,12 @@ display: none;
     margin-left: 30px;
 }
 
+.graph-dividers{
+    height: 2px;
+    background-color: var(--pinkHighlight);
+    opacity: 0.75;
+}
+
 #graph2 {
     background-color: var(--white);
     height: 600px;
