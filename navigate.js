@@ -107,7 +107,7 @@ pages.forEach(element => {
 });
 
 
-const blogs = ["BlogOne.html", "criticalUIUX.html", "BlogThree.html", "BlogFour.html"];
+const blogs = ["BlogOne.html", "criticalUIUX.html", "BlogThree.html", "BlogFour.html", "Exam.html"];
 
 function blogNav(pageNumber, next) {
 

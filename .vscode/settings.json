@@ -9,5 +9,9 @@
   "prettier.enableDebugLogs": true,
   "editor.codeLens": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.singleAttributePerLine": true
+  "prettier.singleAttributePerLine": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "prettier.enable": true
 }
