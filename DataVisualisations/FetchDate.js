@@ -346,13 +346,14 @@ d3.tsv("data.tsv", function (data) {
            .padding(1);
 
          svg
-           .append("g")
-           .attr("transform", `translate(0, ${height})`)
-           .call(d3.axisBottom(x))
-           .selectAll("text")
-           .attr("transform", "translate(-10,0)rotate(-45)")
-           .style("font-size", "11.5px")
-           .style("text-anchor", "end");
+						.append("g")
+						.attr("transform", `translate(0, ${height})`)
+						.call(d3.axisBottom(x))
+						.selectAll("text")
+						.attr("transform", "translate(-10,0)rotate(-45)")
+						.style("font-size", "14px")
+						.style("text-anchor", "end")
+						.call(wrap, x.bandwidth());
 
          // Add Y axis
          const y = d3.scaleLinear().domain([0, 10]).range([height, 0]);

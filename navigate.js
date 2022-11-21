@@ -48,6 +48,7 @@ const pages = [
 ];
 
 const navigationContainer = document.getElementById("nav-list");
+navigationContainer.innerHTML="";
 
 pages.forEach(element => {
     const listItem = document.createElement("li");
