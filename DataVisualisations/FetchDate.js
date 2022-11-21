@@ -450,13 +450,14 @@ d3.tsv("data.tsv", function (data) {
         )
         .padding(1);
       svg
-        .append("g")
-        .attr("transform", `translate(0, ${height})`)
-        .call(d3.axisBottom(x))
-        .selectAll("text")
-        .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("font-size", "11.5px")
-        .style("text-anchor", "end");
+				.append("g")
+				.attr("transform", `translate(0, ${height})`)
+				.call(d3.axisBottom(x))
+				.selectAll("text")
+				.attr("transform", "translate(-10,0)rotate(-45)")
+				.style("font-size", "14px")
+				.style("text-anchor", "end")
+				.call(wrap, x.bandwidth());
       // Add Y axis
       const y = d3.scaleLinear().domain([0, 10]).range([height, 0]);
       svg.append("g").call(d3.axisLeft(y));
@@ -567,8 +568,9 @@ function populateInteractiveGraph(movies) {
         .call(d3.axisBottom(x))
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("font-size", "11.5px")
-        .style("text-anchor", "end");
+        .style("font-size", "14px")
+        .style("text-anchor", "end")
+        .call(wrap, x.bandwidth());
 
       // Add Y axis
       const y = d3.scaleLinear().domain([0, 10]).range([height, 0]);
@@ -611,13 +613,6 @@ function populateInteractiveGraph(movies) {
             return movieRemakesColor;
           }
         });
-
-      
-        // var div = d3
-        //   .select("#interactive-graph")
-        //   .append("div")
-        //   .attr("id", "tooltip")
-        //   .style("opacity", 0);
 
         var div = d3
 					.select("#interactive-graph")
@@ -744,4 +739,38 @@ function shuffleMovies(){
     
    
   });
+}
+
+function wrap(text, width) {
+	text.each(function () {
+		var text = d3.select(this),
+			words = text.text().split(/\s+/).reverse(),
+			word,
+			line = [],
+			lineNumber = 0,
+			lineHeight = 1.1, // ems
+			y = text.attr("y"),
+			dy = parseFloat(text.attr("dy")),
+			tspan = text
+				.text(null)
+				.append("tspan")
+				.attr("x", 0)
+				.attr("y", y)
+				.attr("dy", dy + "em");
+		while ((word = words.pop())) {
+			line.push(word);
+			tspan.text(line.join(" "));
+			if (tspan.node().getComputedTextLength() > width) {
+				line.pop();
+				tspan.text(line.join(" "));
+				line = [word];
+				tspan = text
+					.append("tspan")
+					.attr("x", 0)
+					.attr("y", y)
+					.attr("dy", `${++lineNumber * lineHeight + dy}em`)
+					.text(word);
+			}
+		}
+	});
 }
