@@ -20,11 +20,11 @@
     --movie11:url("art-assets/scarface-movie-poster.jpg");  
     --movie12:url("art-assets/shaft-movie-poster.jpg"); 
     --movie13:url("art-assets/the-lion-king-movie-poster.jpg");  
-    --blog1:url("../art-assets/Group 24.png");
-    --blog2:url("../art-assets/Group 25.png");
-    --blog3:url("../art-assets/Group 28.png");
-    --blog4:url("../art-assets/Group 29.png");
-    --blog5:url("../art-assets/Group 30.png");
+    --blog1:url("art-assets/Group 24.png");
+    --blog2:url("art-assets/Group 25.png");
+    --blog3:url("art-assets/Group 28.png");
+    --blog4:url("art-assets/Group 29.png");
+    --blog5:url("art-assets/Group 30.png");
 }
 
 body{
