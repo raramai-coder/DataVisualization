@@ -56,9 +56,10 @@ const foldedPages = [
 	"criticalUIUX.html",
 	"BlogThree.html",
 	"BlogFour.html",
-    "ExamDataArt.html",
-    "DataVis.html",
-    "styleGuide.html"
+	"ExamDataArt.html",
+	"DataVis.html",
+	"styleGuide.html",
+	"Exam.html",
 ];
 
 const navigationContainer = document.getElementById("nav-list");
