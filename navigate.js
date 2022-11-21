@@ -82,3 +82,25 @@ pages.forEach(element => {
     navigationContainer.append(listItem); 
   
 });
+
+
+const blogs = ["BlogOne.html", "criticalUIUX.html", "BlogThree.html", "BlogFour.html"];
+
+function blogNav(pageNumber, next) {
+
+    if (next) {
+        pageNumber = pageNumber + 1;
+    }else{
+        pageNumber = pageNumber - 1;
+    }
+
+    if (pageNumber==blogs.length) {
+        pageNumber = 0;
+    }
+
+    if (pageNumber<0) {
+        pageNumber = blogs.length -1;
+    }
+
+    window.location = blogs[pageNumber];
+}

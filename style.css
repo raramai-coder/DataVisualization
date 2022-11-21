@@ -844,6 +844,22 @@ background-color: var(--grey);
     align-content: center;
 }
 
+.next-buttons{
+    background-color: var(--pinkBackground);
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 10px;
+    border-color: var(--pinkHighlight);
+}
+
+#nex{
+    float: right;
+}
+
+.next-buttons:hover{
+    background-color: var(--pinkHighlight);
+}
+
 #blog1{
     background-image: var(--blog1) ;
     background-size: cover;
