@@ -30,24 +30,6 @@
                 </span></label>
     
             <ul id="nav-list">
-                <!-- <li>
-                    <a href="#"  id="home" onclick="navigateTo('home',0)">Home</a>
-                </li>
-                <li>
-                    <a href="#" id="blog" onclick="navigateTo('blog',0)">Blog</a>
-                </li>
-                <li>
-                    <a href="#" id="design" onclick="navigateTo('design',0)">Design</a>
-                </li>
-                <li>
-                    <a href="#" id="data-art" class="active" onclick="navigateTo('data-art',0)">Data Art</a>
-                    <div class="underline"></div>
-                </li>
-                <li>
-                    <div id="data-vis-button">
-                        <a href="#" id="data-vis" onclick="navigateTo('data-vis',0)">Data Visualisation ></a>
-                    </div>
-                </li> -->
             </ul>
         </nav>
     </header>
@@ -96,7 +78,7 @@
                 <button class="film-selections" id="0" onclick="pickMovie(0)">Original</button>
                 <button class="film-selections" id="1" onclick="pickMovie(1)">Remake</button>
             </section>
-            <p id="diff">2.6</p>
+            <p id="diff">2.5</p>
             <section class="slide-container">
                 <input type="range" min="0" max="5" value="2.5" class="slider" 
                 id="myRange" step="0.1"
@@ -105,6 +87,7 @@
             <!-- <p id="diff"></p> -->
             <button id="enter-input" onclick="calculateScore()">
             </button>
+            <div id="results-div"></div>
         </section>
 
         <section id="scoreboard">

@@ -545,13 +545,14 @@ display: none;
 #rules-container{
     grid-column-start: 1;
     grid-column-end: 2; 
-    background-color: #FFF;
+    background-color: var(--pinkBackground);
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 15px;
     border-width: 1px;
     padding: 10px;
     grid-column-start: 1;
     grid-column-end: 2;
+    border-color: var(--pinkHighlight);
 }
 
 #play-area{
@@ -559,12 +560,13 @@ display: none;
     grid-column-end: 5; 
     background-color: #FFF;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 15px;
     border-width: 1px;
     padding: 10px;
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 5;
+    border-color: var(--pinkHighlight);
 }
 
 #play-area h3{
@@ -581,13 +583,14 @@ display: none;
 #scoreboard{
     grid-column-start: 5;
     grid-column-end: 8; 
-    background-color: #FFF;
+    background-color: var(--pinkBackground);
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 15px;
     border-width: 1px;
     padding: 10px;
     grid-column-start:5;
     grid-column-end: 6;
+    border-color: var(--pinkHighlight);
 }
 
 #enter-input{

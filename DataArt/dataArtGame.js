@@ -19,7 +19,9 @@ class Movie{
     }
 
     Difference(){
-        return (Math.abs(this.originalRating-this.remakeRating));
+        let subTotal = Math.abs(this.originalRating-this.remakeRating);
+        var subTotalFormatted = parseFloat(subTotal).toFixed(2);
+        return subTotalFormatted;
     }
 
     Title(){
@@ -122,9 +124,9 @@ function pickMovie(params) {
 }
 
 function calculateScore() {
-    console.log(moviePlaying);
-    console.log(movieChosen);
-    console.log(ratingChosen);
+    //console.log(moviePlaying);
+    //console.log(movieChosen);
+    //console.log(ratingChosen);
 
     finalScore = 0;
 
@@ -134,12 +136,12 @@ function calculateScore() {
     }else if (moviePlaying.BetterMovie()==2) {
 		//console.log("draw");
         finalScore = finalScore + 2;
-        console.log("final score" + finalScore);
+        //console.log("final score" + finalScore);
         setScore();
         return;
     }else{
         finalScore = finalScore -2;
-        console.log("final score" + finalScore);
+        //console.log("final score" + finalScore);
         setScore();
         return;
     }
@@ -156,13 +158,17 @@ function calculateScore() {
          finalScore = finalScore + 1;
     }
 
-    console.log("final score" + finalScore);
+    //console.log("final score" + finalScore);
 
     setScore();
 }
 
 function setScore() {
-    let scoreBoard = document.getElementById("score-text");
+    const scoreBoard = document.getElementById("score-text");
+    const resultDisp = document.getElementById("results-div");
+
+    resultDisp.innerHTML = "";
+
     displayScore = displayScore + finalScore;
 	scoreBoard.innerText = "Score: " + displayScore;
 
@@ -173,6 +179,20 @@ function setScore() {
     const movieList = document.getElementById("moviesPlayed");
     movieList.append(paraScore);
 
+    
+    const resultText = document.createElement("p");
+    const resultText2 = document.createElement("p");
+    const resultText3 = document.createElement("p");
+    const textNode = document.createTextNode(moviePlaying.Title() + " Original: " + moviePlaying.originalRating);
+    const textNode2 = document.createTextNode("Remake: " + moviePlaying.remakeRating);
+    const textNode3 = document.createTextNode("Difference: " + moviePlaying.Difference());
+
+    resultText.append(textNode);
+    resultText2.append(textNode2);
+    resultText3.append(textNode3);
+    resultDisp.append(resultText);
+    resultDisp.append(resultText2);
+    resultDisp.append(resultText3);
     setMovieToPlay();
 }
 
