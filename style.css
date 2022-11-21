@@ -660,9 +660,6 @@ display: none;
     gap:10px;
     margin: 20px;
     margin-top: 80px;
-    /* top: 160px; */
-   
-   
 }
 
 #main-section h1{
@@ -673,6 +670,35 @@ display: none;
 
 #legend-section{
     grid-column: 1/2;
+    
+}
+
+#original-circle{
+    width: 25px;
+    background-color: #69b3a2;
+    height: 25px;
+    border-radius: 15px;
+    border-color: var(--black);
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
+}
+
+#remake-circle{
+    width: 25px;
+    background-color: #88CCF1;
+    height: 25px;
+    border-radius: 15px;
+    border-color: var(--black);
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
+}
+
+.key-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #graph-section{
@@ -730,6 +756,9 @@ display: none;
     border-width: 1px;
     text-align: center;
     font-size: 25px;
+    padding: 10px;
+    min-width: 250px;
+    margin-top: 14px;
 }
 
 #variable-container{
