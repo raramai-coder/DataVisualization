@@ -361,7 +361,6 @@ footer{
 }
 /* #endregion */
 
-
 /* #region Navigation */
 nav{
 float: right;
@@ -1029,6 +1028,29 @@ background-color: var(--grey);
         grid-column-end: 6;
     }
 
+    .design-container{
+        /* display:flex; */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .design-image {
+        width:100%;
+        height: auto;
+    }
+
+    .design-divider {
+        height: 2.5px;
+        width: 100%;
+    }
+
+    .design-text-container {
+        max-width: 100%;
+    }
+
+    #legend-section{
+        display: none;
+    }
 }
 
 /* #endregion */
