@@ -40,11 +40,11 @@
 // }
 
 const pages = [
-	{ url: "../index.html", name: "Home", id: "home" },
-	{ url: "../Blogs.html", name: "Blog", id: "blog" },
-	{ url: "../Design.html", name: "Design", id: "design" },
-	{ url: "../DataArt.html", name: "Data Art", id: "data-art" },
-	{ url: "../DataVisualisations/DataVis.html", name: "Data Visualisation >", id: "data-vis" },
+	{ url: "index.html", name: "Home", id: "home" },
+	{ url: "Blogs.html", name: "Blog", id: "blog" },
+	{ url: "Design.html", name: "Design", id: "design" },
+	{ url: "DataArt.html", name: "Data Art", id: "data-art" },
+	{ url: "DataVisualisations/DataVis.html", name: "Data Visualisation >", id: "data-vis" },
 ];
 
 const navigationContainer = document.getElementById("nav-list");
