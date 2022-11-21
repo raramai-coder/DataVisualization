@@ -613,11 +613,17 @@ function populateInteractiveGraph(movies) {
         });
 
       
+        // var div = d3
+        //   .select("#interactive-graph")
+        //   .append("div")
+        //   .attr("id", "tooltip")
+        //   .style("opacity", 0);
+
         var div = d3
-          .select("#interactive-graph")
-          .append("div")
-          .attr("id", "tooltip")
-          .style("opacity", 0);
+					.select("#interactive-graph")
+					.append("div")
+					.attr("class", "tooltip-donut")
+					.style("opacity", 0);
       
         // Original Movies Circles
       svg
@@ -633,18 +639,19 @@ function populateInteractiveGraph(movies) {
         .attr("r", "10")
         .style("fill", originalMoviesColor)
         .attr("stroke", "black")
-        .on('mouseenter', function (d,i) {
+        .on('mouseover', function (d,i) {
           d3.select(this).transition()
                .duration('50')
                .attr('opacity', '.75');
     
           div.transition().duration(50).style("opacity", 1);
           let str = "Original: " +i.title + " Rating: " + i.originalRating;
-          div
+          //console.log(d.pageX);
+          return div
             .html(str)
-            .style("left", d.pageX + 10 + "px")
+            .style("left", (d.pageX + 10) + "px")
             .style("background-color", originalMoviesColor)
-            .style("top", d.pageY - 15 + "px"); 
+            .style("top", (d.pageY - 15) + "px"); 
               
             })
         .on('mouseout', function (d, i) {
@@ -652,7 +659,7 @@ function populateInteractiveGraph(movies) {
                .duration('50')
                .attr('opacity', '1');
 
-              div.transition().duration(50).style("opacity", 0);
+              div.transition().duration('50').style("opacity", 0);
               
               });
 
