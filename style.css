@@ -904,7 +904,7 @@ background-color: var(--grey);
 
 /* #region Design Page */
 #design-toggle{
-    width: 35%;
+    width: fit-content;
     /* background-color: var(--white); */
     margin: auto;
     border-style: solid;

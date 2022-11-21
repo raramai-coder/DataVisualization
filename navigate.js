@@ -47,6 +47,20 @@ const pages = [
 	{ url: "DataVisualisations/DataVis.html", name: "Data Visualisation >", id: "data-vis" },
 ];
 
+var path = window.location.pathname;
+var page = path.split("/").pop();
+//console.log(page);
+
+const foldedPages = [
+	"BlogOne.html",
+	"criticalUIUX.html",
+	"BlogThree.html",
+	"BlogFour.html",
+    "ExamDataArt.html",
+    "DataVis.html",
+    "styleGuide.html"
+];
+
 const navigationContainer = document.getElementById("nav-list");
 navigationContainer.innerHTML="";
 
@@ -56,9 +70,17 @@ pages.forEach(element => {
 
     link.innerText = element.name;
 
-    link.onclick= function() {
-        link.href = element.url;
+    if (foldedPages.includes(page)) {
+        link.onclick = function () {
+			link.href = "../" +element.url;
+		};
+    }else{
+         link.onclick = function () {
+			link.href = element.url;
+		};
     }
+
+   
 
     link.id = element.id;
    
