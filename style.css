@@ -853,7 +853,7 @@ background-color: var(--grey);
 
 /* #region Design Page */
 #design-toggle{
-    width: 30%;
+    width: 35%;
     /* background-color: var(--white); */
     margin: auto;
     border-style: solid;
@@ -867,7 +867,10 @@ background-color: var(--grey);
     text-align: center;
     font-size: 30px;
     justify-content: center;
+    font-family: 'Aboreto', cursive;
+    color: var(--black);
 }
+
 
 #design-main{
     margin-top: 130px;
@@ -876,11 +879,16 @@ background-color: var(--grey);
 }
 
 #selected{
-    width: 50%;
+    /* width: 50%; */
     background-color: var(--pinkHighlight);
     border-radius: 15px;
-    
+    padding: 10px; 
 }
+
+#unselected{
+    padding: 10px; 
+}
+
 
 #unselected a{
     text-decoration: none;
